@@ -32,7 +32,7 @@ namespace SimpleEventSourcing
         {
             _miles = e.OpeningMiles;
             _tierPoints = 0;
-	    _status = MembershipStatus.Red;
+            _status = MembershipStatus.Red;
             _accountExpiryDate = e.ExpiryDate;
         }
 
@@ -50,7 +50,7 @@ namespace SimpleEventSourcing
 
         public FrequentFlierAccount()
         {
-	    AddHandler<NewAccountRegistered>(Apply);
+            AddHandler<NewAccountRegistered>(Apply);
             AddHandler<FlightTaken>(Apply);
             AddHandler<PromotedToGoldStatus>(Apply);
         }
