@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using SimpleEventSourcing;
 
 namespace Driver
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             //Construction
             var account = new FrequentFlierAccount();
