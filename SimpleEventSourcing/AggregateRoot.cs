@@ -19,7 +19,7 @@ namespace SimpleEventSourcing
             Handlers = new Dictionary<Type, Action<object>>();
         }
 
-        protected void AddHandler<T>(Action<T> handler) where T : IEvent
+        protected static void AddHandler<T>(Action<T> handler) where T : IEvent
         {
             Handlers.Add(typeof (T), e => handler((T)e));
         }
